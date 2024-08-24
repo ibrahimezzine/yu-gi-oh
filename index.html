@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Fichiers</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <h1>Gestion des Fichiers</h1>
+    
+    <!-- Formulaire pour télécharger des fichiers -->
+    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="fileToUpload">Sélectionnez un fichier à télécharger :</label><br>
+        <input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+        <input type="submit" value="Télécharger le fichier" name="submit">
+    </form>
+    
+    <hr>
+    
+    <!-- Liste des fichiers disponibles -->
+    <h2>Fichiers stockés</h2>
+    <ul id="fileList">
+         <?php include 'list_files.php'; ?>
+    </ul>
+</body>
+</html>
